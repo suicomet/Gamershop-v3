@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de nuevo usuario</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css"> 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .card {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e0e0e0;
+            background-color: #f9f9f9;
+        }
+
+        .form-group label {
+            font-weight: bold;
+            color: #333;
+        }
+
+        .form-control {
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            color: white;
+        }
+
+        .btn-secondary {
+            background-color: #6c757d;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            color: white;
+        }
+
+        .form-control {
+            padding: 12px; 
+        }
+
+        .form-group label {
+            margin-bottom: 5px; 
+        }
+
+        .btn-primary, .btn-secondary {
+            border-radius: 8px; 
+            padding: 12px 25px; 
+            transition: background-color 0.3s ease; 
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3; 
+        }
+
+        .btn-secondary:hover {
+            background-color: #545b62; 
+        }
+        .hero-body {
+            background-image: url('rege.png'); 
+            background-repeat: no-repeat;
+            background-position: left center;
+            background-size: cover;
+        }
+        .modal {
+            display: none; 
+            position: fixed; 
+            z-index: 1; 
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto; 
+            background-color: rgba(0, 0, 0, 0.4); 
+        }
+
+        .modal-contenido {
+            background-color: #fefefe;
+            margin: 20% auto; 
+            padding: 20px;
+            border: 1px solid #888;
+            width: 40%; 
+        }
+
+        .cerrar-modal {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .cerrar-modal:hover,
+        .cerrar-modal:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .container.mt-5 {
+            margin-bottom: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header-container">
+        <div class="left-container">
+            <a hreft="#" class="header-logo" id="logo-gamershop">Gamershop</a>
+            <a hreft="#" class="categories">Categorías</a>
+        </div>
+        <div class="right-header">
+            <div class="header-search"><input type="text"></div>
+            <img id="logo-search" src="icons8-search.svg" alt="Icono de busqueda">
+        </div>
+    </div>
+        <div class="hero-body">
+            <div class="container mt-5">
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <div class="card shadow-lg p-4">
+                            
+                                    <div id="registro-container">
+                                        <h2>Registro de usuario</h2>
+                                        <form id="formulario">
+                                            <div class="form-group">
+                                                <label for="nombre-completo">Nombre completo:</label> 
+                                                <input type="text" name="nombre" class="form-control" placeholder="Ingresa tu nombre" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="nombre-usuario">Nombre de usuario: </label>
+                                                <input type="text" name="username" class="form-control"  placeholder="Ingresa tu usuario:" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="contra">Contraseña:</label>
+                                                <input type="password" name="contra" class="form-control" placeholder="Ingresa tu contraseña de 6 caracteres:" required> 
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="recontra">Reingrese su contraseña: </label>
+                                                <input type="password" name="recontra" class="form-control" placeholder="Reingresa y confirma tu contraseña de 6 caracteres:" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="correo">Correo electronico:</label>
+                                                <input type="email" name="email" class="form-control" placeholder="ejemplo@email.com" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="fecha-nacimiento">Fecha de nacimiento:</label>
+                                                <input type="date" name="fecha-nacimiento" class="form-control" max="2013-03-23" required>
+                                            </div>   
+                                            <div class="form-group">
+                                                <label for="direccion">Direccion:</label>
+                                                <input type="text" name="direccion" class="form-control" placeholder="Calle #Número">
+                                            </div>
+
+                                            <input type="submit" value="Registrar">
+                                            <input type="reset" value="Limpiar">
+                                        </form>
+                                    </div>
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-container">
+            <p class="footer-text">Todos los derechos reservados © Gamershop 2025</p>
+        </div>
+        <div id="modal-mensaje" class="modal">
+            <div class="modal-contenido">
+                <span class="cerrar-modal">&times;</span>
+                <p id="mensaje-modal"></p>
+                <button id="aceptar-modal">Aceptar</button> 
+            </div>
+        </div>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("input[name='recontra']").on("input", function(){
+                    let password = $("input[name='contra']").val();
+                    let confirmPassword = $(this).val();
+        
+                    if (password !== confirmPassword){
+                        mostrarModal("Las contraseñas no coinciden.", true);
+                        $("input[type='submit']").prop("disabled", true);
+                    } else if ((password.length < 6 || password.length > 18)) {
+                        mostrarModal("La contraseña debe tener un rango de 6 a 18 carácteres.", true);
+                        $("input[type='submit']").prop("disabled", true);
+                    } else {
+                        mostrarModal("Las contraseñas coinciden.", false);
+                        $("input[type='submit']").prop("disabled", false);
+                    }
+                });
+        
+                $("#formulario").submit(function(e){
+                    e.preventDefault();
+        
+                    let password = $("input[name='contra']").val();
+                    let confirmPassword = $("input[name='recontra']").val();
+        
+                    if(password !== confirmPassword){
+                        mostrarModal("Error: las contraseñas no coinciden.", true);
+                        return;
+                    }
+        
+                    $.ajax({
+                        url: "https://jsonplaceholder.typicode.com/posts",
+                        type: "POST",
+                        data: $(this).serialize(),
+                        success: function(respuesta){
+                            mostrarModal("Datos enviados correctamente.", false);
+                        },
+                        error: function(){
+                            mostrarModal("Error al enviar datos.", true);
+                        }
+                    });
+                });
+        
+                function mostrarModal(mensaje, esError) {
+                    $("#mensaje-modal").text(mensaje);
+                    $("#modal-mensaje").show();
+        
+
+                    if (esError) {
+                        $("#mensaje-modal").css("color", "red");
+                    } else {
+                        $("#mensaje-modal").css("color", "green");
+                    }
+                }
+        
+
+                $(".cerrar-modal, #aceptar-modal").click(function() {
+            $("#modal-mensaje").hide();
+        });
+        });
+        </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juegos de Acción</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body { background-color: #ffebee; color: #333; }
+        .container { display: flex; flex-wrap: wrap; justify-content: center; padding: 20px; }
+        .juego { position: relative; background: #ffcdd2; border-radius: 10px; box-shadow: 4px 4px 15px rgba(211, 47, 47, 0.5); margin: 20px; padding: 20px; width: 300px; text-align: left; }
+        .juego img { width: 100%; border-radius: 10px; }
+        .juego-titulo { position: absolute; top: 10px; left: 10px; background: rgba(211, 47, 47, 0.9); color: white; padding: 5px 10px; border-radius: 5px; font-weight: bold; }
+        .back-button { text-align: center; margin: 20px; }
+        .back-button a { text-decoration: none; color: #fff; font-weight: bold; padding: 10px 15px; background: #d32f2f; border-radius: 5px; transition: 0.3s; }
+        .back-button a:hover { background: #b71c1c; }
+    </style>
+</head>
+<body>
+    <div class="header-container">
+        <div class="left-container">
+            <div class="header-logo"> <p id="logo-gamershop">Gamershop</p></div>
+            <div class="categories"><a href="Categorias.html">Categorías</a></div>
+        </div>
+        
+        <div class="right-header">
+            <div class="header-search"><input type="text"></div>
+            <img id="logo-search" src="icons8-search.svg" alt="Icono de búsqueda">
+        </div>
+    </div>
+    
+    <section class="hero-body">
+        <div class="container">
+            <div class="juego">
+                <span class="juego-titulo">Juegos de Acción</span>
+                <img src="https://static.wikia.nocookie.net/cod/images/7/76/ModernWarfare2019_Artwork.jpg/revision/latest/thumbnail/width/360/height/360?cb=20190530231942&path-prefix=es" alt="Call of Duty">
+                <p><strong>Nombre:</strong> Call of Duty Modern Warfare</p>
+                <p><strong>Descripción:</strong> Shooter táctico en primera persona con una campaña realista y un multijugador competitivo.</p>
+                <p><strong>Precio:</strong> CLP$47.650</p>
+            </div>
+            <div class="juego">
+                <span class="juego-titulo">Juegos de Acción</span>
+                <img src="https://image.api.playstation.com/vulcan/ap/rnd/202010/0114/ERNPc4gFqeRDG1tYQIfOKQtM.png" alt="Doom">
+                <p><strong>Nombre:</strong> Doom Eternal</p>
+                <p><strong>Descripción:</strong> FPS frenético donde luchas contra demonios con acción rápida y bruta.</p>
+                <p><strong>Precio:</strong> CLP$26.000</p>
+            </div>
+        </div>
+    </section>
+    
+    <div class="back-button">
+        <a href="index.html">Volver al inicio</a>
+    </div>
+    
+    <div class="footer-container">
+        <p class="footer-text">Todos los derechos reservados © Gamershop 2025 </p>
+    </div>
+</body>
+</html>
+

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juegos de Terror</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body { background-color: #111; color: #fff; }
+        .container { display: flex; flex-wrap: wrap; justify-content: center; padding: 20px; }
+        .juego { position: relative; background: #333; border-radius: 10px; box-shadow: 4px 4px 15px rgba(255,0,0,0.3); margin: 20px; padding: 20px; width: 300px; text-align: left; }
+        .juego img { width: 100%; border-radius: 10px; }
+        .juego-titulo { position: absolute; top: 10px; left: 10px; background: rgba(255, 0, 0, 0.9); color: white; padding: 5px 10px; border-radius: 5px; font-weight: bold; }
+        .back-button { text-align: center; margin: 20px; }
+        .back-button a { text-decoration: none; color: #fff; font-weight: bold; padding: 10px 15px; background: #222; border-radius: 5px; transition: 0.3s; }
+        .back-button a:hover { background: #ff4444; color: #000; }
+    </style>
+</head>
+<body>
+    <div class="header-container">
+        <div class="left-container">
+            <div class="header-logo"> <p id="logo-gamershop">Gamershop</p></div>
+            <div class="categories"><a href="Categorias.html">Categorías</a></div>
+        </div>
+        
+        <div class="right-header">
+            <div class="header-search"><input type="text"></div>
+            <img id="logo-search" src="icons8-search.svg" alt="Icono de búsqueda">
+        </div>
+    </div>
+    
+    <section class="hero-body">
+        <div class="container">
+            <div class="juego">
+                <span class="juego-titulo">Juegos de Terror</span>
+                <img src="https://esports.as.com/2020/10/20/bonus/videojuegos/Phasmophobia_1402669753_520194_1440x600.jpg" 
+                alt="Phasmophobia">
+                <p><strong>Nombre:</strong> Phasmophobia</p>
+                <p><strong>Descripción:</strong> Phasmophobia es un juego de terror cooperativo en primera persona donde los jugadores asumen el rol de investigadores paranormales. El objetivo es recopilar pruebas de actividad fantasmal en diversas ubicaciones utilizando herramientas como cámaras, detectores de EMF y termómetros. Cada fantasma tiene comportamientos y características únicas, lo que obliga a los jugadores a trabajar en equipo para identificar correctamente la entidad antes de que se vuelva agresiva.</p>
+                <p><strong>Precio:</strong> CLP$12.000</p>
+            </div>
+        
+            <div class="juego">
+                <span class="juego-titulo">Juegos de Terror</span>
+                <img src="https://images.steamusercontent.com/ugc/787504733805824724/CFC77587F3F3CE121CC35DCB4F9CA672E4C7FAC4/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false" alt="Silent Hill">
+                <p><strong>Nombre:</strong> Silent Hill</p>
+                <p><strong>Descripción:</strong> Silent Hill (1999) es un survival horror para PlayStation donde Harry Mason busca a su hija Cheryl en el misterioso pueblo de Silent Hill. Envuelto en una espesa niebla y rodeado de criaturas aterradoras, Harry descubre una oscura historia de culto y sacrificios. Con una atmósfera inquietante y una narrativa psicológica, el juego es un clásico del terror.</p>
+                <p><strong>Precio:</strong> CLP$4.990</p>
+            </div>
+        </div>
+    </section>
+    
+    <div class="back-button">
+        <a href="index.html">Volver al inicio</a>
+    </div>
+    
+    <div class="footer-container">
+        <p class="footer-text">Todos los derechos reservados © Gamershop 2025 </p>
+    </div>
+</body>
+</html>

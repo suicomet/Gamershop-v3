@@ -89,6 +89,26 @@ a, a:visited, a:hover, a:active {
 
 }
 
+.hero-body-terms {
+    padding-top: 50px;
+    background-color:  rgb(24, 29, 27);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.hero-container-terminos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding-bottom: 50px;
+    max-width: 1000px;
+}
+
 #title {
     font-size: 7rem;
     text-align: center;
@@ -136,6 +156,7 @@ a, a:visited, a:hover, a:active {
     align-items: center;
     background-color: rgb(67, 68, 68);
     padding: 20px 0;
+    gap: 10px;
 }
 
 .footer-text {
